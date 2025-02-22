@@ -203,8 +203,28 @@ export default {
   },
 };
 </script>
-
 <style scoped>
+/* Define Light and Dark Mode Variables */
+:root {
+  --bg-color: #f9fafb; /* Light background */
+  --text-color: #333; /* Dark text */
+  --card-bg-color: white; /* White cards */
+  --border-color: #e5e7eb; /* Light border */
+  --primary-color: #6a11cb; /* Accent color */
+  --secondary-text-color: #6b7280; /* Gray text */
+  --hover-bg: #f3f4f6; /* Hover background */
+}
+
+[data-theme="dark"] {
+  --bg-color: #1f2937; /* Dark background */
+  --text-color: #ffffff; /* Light text */
+  --card-bg-color: #374151; /* Dark cards */
+  --border-color: #4b5563; /* Dark border */
+  --primary-color: #ff7e5f; /* Warm accent */
+  --secondary-text-color: #d1d5db; /* Light gray text */
+  --hover-bg: #4b5563; /* Dark hover background */
+}
+
 /* General Styles */
 .home {
   font-family: "Inter", Arial, sans-serif;
@@ -219,7 +239,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, var(--primary-color), #2575fc);
   color: white;
   padding: 60px 20px;
   border-radius: 15px;
@@ -251,6 +271,7 @@ export default {
   font-weight: 700;
   margin-bottom: 15px;
   letter-spacing: -0.02em;
+  color: white;
 }
 
 .hero-subtitle {
@@ -265,8 +286,11 @@ export default {
   font-size: 1.2rem;
   font-weight: 600;
   border-radius: 8px;
+  background-color: white;
+  color: var(--primary-color);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
 }
 
 .hero .btn:hover {
@@ -289,7 +313,7 @@ export default {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 40px;
-  color: var(--primary-text-color);
+  color: var(--text-color);
 }
 
 .feature-grid {
@@ -306,13 +330,13 @@ export default {
   padding: 30px;
   width: 350px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .feature-card i {
@@ -325,7 +349,7 @@ export default {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 10px;
-  color: var(--primary-text-color);
+  color: var(--text-color);
 }
 
 .feature-card p {
@@ -353,25 +377,25 @@ export default {
   padding: 30px;
   width: 350px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .testimonial-card p {
   font-size: 1.2rem;
   font-weight: 400;
-  color: var(--secondary-text-color);
+  color: var(--text-color);
   margin-bottom: 15px;
 }
 
 .testimonial-card .author {
   font-size: 1rem;
   font-style: italic;
-  color: var(--primary-text-color);
+  color: var(--primary-color);
 }
 
 /* Call to Action */
 .cta {
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  background: linear-gradient(135deg, var(--primary-color), #feb47b);
   color: white;
   padding: 80px 20px;
   border-radius: 15px;
@@ -397,8 +421,11 @@ export default {
   font-size: 1.2rem;
   font-weight: 600;
   border-radius: 8px;
+  background-color: white;
+  color: var(--primary-color);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
 }
 
 .cta .btn:hover {

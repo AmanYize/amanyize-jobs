@@ -61,25 +61,45 @@ export default {
   name: "AboutView",
 };
 </script>
-
 <style scoped>
+/* Define Light and Dark Mode Variables */
+:root {
+  --bg-color: #f9fafb; /* Light background */
+  --text-color: #333; /* Dark text */
+  --card-bg-color: white; /* White cards */
+  --border-color: #e5e7eb; /* Light border */
+  --primary-color: #6a11cb; /* Accent color */
+  --secondary-text-color: #6b7280; /* Gray text */
+  --hover-bg: #f3f4f6; /* Hover background */
+}
+
+[data-theme="dark"] {
+  --bg-color: #1f2937; /* Dark background */
+  --text-color: #ffffff; /* Light text */
+  --card-bg-color: #374151; /* Dark cards */
+  --border-color: #4b5563; /* Dark border */
+  --primary-color: #ff7e5f; /* Warm accent */
+  --secondary-text-color: #d1d5db; /* Light gray text */
+  --hover-bg: #4b5563; /* Dark hover background */
+}
+
 /* General Styles */
 .about {
-  font-family: Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   color: var(--text-color);
   background-color: var(--bg-color);
-  padding: 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  background: linear-gradient(135deg, var(--primary-color), #2575fc);
   color: white;
   padding: 60px 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-bottom: 40px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
 .hero h1 {
@@ -131,17 +151,17 @@ export default {
 .team-member {
   background-color: var(--card-bg-color);
   border: 1px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 20px;
   width: 200px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .team-member:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .team-member img {
@@ -186,7 +206,7 @@ export default {
 .value-list li {
   background-color: var(--card-bg-color);
   border: 1px solid var(--border-color);
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -208,12 +228,12 @@ export default {
 
 /* Call to Action */
 .cta {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, var(--primary-color), #feb47b);
   color: white;
   padding: 60px 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
 .cta h2 {
@@ -229,9 +249,12 @@ export default {
 .cta .btn {
   padding: 12px 24px;
   font-size: 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
+  background-color: white;
+  color: var(--primary-color);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
 }
 
 .cta .btn:hover {
