@@ -14,12 +14,14 @@
 export default {
   data() {
     return {
-      jobs: [
-        { title: "UX Designer", salary: 30000, id: 1, details: "lorem" },
-        { title: "Web Developer", salary: 40000, id: 2, details: "lorem" },
-        { title: "Vue Developer", salary: 50000, id: 3, details: "lorem" },
-      ],
+      jobs: [],
     };
+  },
+  mounted() {
+    fetch("https://fakejobs-api.vercel.app/jobs")
+      .then((res) => res.json())
+      .then((data) => (this.jobs = data))
+      .catch((err) => console.log(err));
   },
 };
 </script>
