@@ -70,7 +70,6 @@ export default {
 }
 
 .job-card {
-  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -79,14 +78,14 @@ export default {
 
 .job-title {
   font-size: 2rem;
-  color: #333333;
+  color: #666666;
   margin-bottom: 10px;
 }
 
 .job-location,
 .job-salary {
   font-size: 1.2rem;
-  color: #555555;
+  color: #666666;
   margin: 5px 0;
 }
 
@@ -98,13 +97,13 @@ export default {
 .job-description h2,
 .company-info h2 {
   font-size: 1.5rem;
-  color: #333333;
+  color: #666666;
   margin-bottom: 10px;
 }
 
 .company-info h3 {
   font-size: 1.3rem;
-  color: #444444;
+  color: #666666;
   margin-bottom: 5px;
 }
 

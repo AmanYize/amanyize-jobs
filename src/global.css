@@ -1,0 +1,62 @@
+/* Global Styles */
+:root {
+  --bg-color: #ffffff; /* Light mode background */
+  --text-color: #333333; /* Light mode text */
+  --card-bg-color: #ffffff; /* Light mode card background */
+  --border-color: #e0e0e0; /* Light mode border */
+  --primary-text-color: #333333; /* Light mode primary text */
+  --secondary-text-color: #555555; /* Light mode secondary text */
+  --primary-color: #007bff; /* Light mode primary color */
+}
+
+.dark-mode {
+  --bg-color: #121212; /* Dark mode background */
+  --text-color: #e0e0e0; /* Dark mode text */
+  --card-bg-color: #1e1e1e; /* Dark mode card background */
+  --border-color: #333333; /* Dark mode border */
+  --primary-text-color: #e0e0e0; /* Dark mode primary text */
+  --secondary-text-color: #a0a0a0; /* Dark mode secondary text */
+  --primary-color: #bb86fc; /* Dark mode primary color */
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-text-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--hover-bg);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--hover-bg);
+}
